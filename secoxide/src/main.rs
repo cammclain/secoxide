@@ -31,39 +31,6 @@
 //! ## Disclaimer
 //! This code is provided as an example. Make sure to audit and test thoroughly before using in production.
 
-//! # brute-seco-rs (Production-Optimized - Rainbow Table Version)
-//!
-//! This tool recovers an Exodus wallet’s seed (or secret) from encrypted `.seco` files.
-//! It parses the file header, derives the key using scrypt, and decrypts the ciphertext
-//! using AES-256-GCM. It processes an entire directory of `.seco` files concurrently,
-//! uses Rayon to parallelize candidate password processing, and provides real-time logging
-//! and progress output.
-//!
-//! ## File Format (Hypothetical)
-//! - 4 bytes: Magic ("SECO")
-//! - 1 byte: Version (0 or 1)
-//! - 1 byte: Salt length (e.g., 16)
-//! - Salt (variable)
-//! - 1 byte: IV length (e.g., 12)
-//! - IV (variable)
-//! - 1 byte: Tag length (e.g., 16)
-//! - Tag (variable)
-//! - Ciphertext (rest of file)
-//!
-//! ## Cryptography
-//! - Key derivation via scrypt with fixed parameters: N=16384, r=8, p=1.
-//! - Decryption via AES-256-GCM.
-//!
-//! ## Usage
-//!
-//! ```sh
-//! cargo build --release
-//! ./target/release/brute-seco-rs --directory /path/to/seco_dir --wordlist /path/to/wordlist.txt --verbose
-//! ```
-//!
-//! ## Disclaimer
-//! This code is provided as an example. Make sure to audit and test thoroughly before using in production.
-
 use anyhow::{anyhow, Context, Result};
 use aes_gcm::{Aes256Gcm, Nonce};
 use aes_gcm::KeyInit;
