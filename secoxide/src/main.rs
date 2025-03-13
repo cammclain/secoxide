@@ -1,4 +1,4 @@
-//! # brute-seco-rs (Production-Optimized - Rainbow Table Version)
+//! # secoxide (Production-Optimized - Rainbow Table Version)
 //!
 //! This tool recovers an Exodus wallet’s seed (or secret) from encrypted `.seco` files.
 //! It parses the file header, derives the key using scrypt, and decrypts the ciphertext
