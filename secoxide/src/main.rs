@@ -25,7 +25,7 @@
 //!
 //! ```sh
 //! cargo build --release
-//! ./target/release/brute-seco-rs --directory /path/to/seco_dir --wordlist /path/to/wordlist.txt --verbose
+//! ./target/release/secoxide --directory /path/to/seco_dir --wordlist /path/to/wordlist.txt --verbose
 //! ```
 //!
 //! ## Disclaimer
@@ -292,7 +292,7 @@ async fn main() -> Result<()> {
     } else {
         env_logger::init();
     }
-    info!("Starting brute-seco-rs (production-optimized version)");
+    info!("Starting Secoxide (production-optimized version)");
 
     // Read wordlist as bytes, then convert using from_utf8_lossy to handle non-UTF8 input.
     let wordlist_bytes = fs::read(&args.wordlist)

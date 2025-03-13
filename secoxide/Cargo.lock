@@ -171,25 +171,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "brute-seco-rs"
-version = "0.1.0"
-dependencies = [
- "aead",
- "aes-gcm",
- "anyhow",
- "clap",
- "env_logger",
- "futures",
- "hex",
- "indicatif",
- "log",
- "rayon",
- "scrypt",
- "sha2",
- "tokio",
-]
-
-[[package]]
 name = "bumpalo"
 version = "3.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -831,6 +812,25 @@ dependencies = [
  "pbkdf2",
  "salsa20",
  "sha2",
+]
+
+[[package]]
+name = "secoxide"
+version = "0.1.0"
+dependencies = [
+ "aead",
+ "aes-gcm",
+ "anyhow",
+ "clap",
+ "env_logger",
+ "futures",
+ "hex",
+ "indicatif",
+ "log",
+ "rayon",
+ "scrypt",
+ "sha2",
+ "tokio",
 ]
 
 [[package]]

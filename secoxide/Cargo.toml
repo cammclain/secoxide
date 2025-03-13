@@ -1,5 +1,5 @@
 [package]
-name = "brute-seco-rs"
+name = "secoxide"
 version = "0.1.0"
 edition = "2021"
 
