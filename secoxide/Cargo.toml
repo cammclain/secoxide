@@ -1,0 +1,20 @@
+[package]
+name = "brute-seco-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+aes-gcm = "0.10.3"
+aead = "0.5"
+clap = { version = "4", features = ["derive"] }
+env_logger = "0.9"
+indicatif = "0.17"
+log = "0.4"
+rayon = "1.5"
+scrypt = "0.10"
+sha2 = "0.10"
+hex = "0.4"
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+
